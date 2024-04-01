@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internal Re-Use Website</title>
+</head>
+<body>
+<h1>Internal Re-Use Website</h1>
+<ul>
+{% for example in examples %}
+<li><a href="{{ url_for('example', example_id=loop.index) }}">{{ example.title }}</a></li>
+{% endfor %}
+</ul>
+</body>
+</html>
+
+
